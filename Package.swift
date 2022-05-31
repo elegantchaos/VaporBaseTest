@@ -16,7 +16,7 @@ let package = Package(
     
     products: [
         .executable(
-            name: "vbt",
+            name: "web",
             targets: ["VaporBaseTest"]
         ),
     ],
