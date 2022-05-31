@@ -9,8 +9,10 @@ import Vapor
 import VaporBase
 
 class TestSite: VaporBaseSite {
-    override var name: String { "Test"}
-    override var database: String { "vaporbasetest" }
+    init() {
+        let db = Database(name: "vaporbasetest")
+        super.init(name: "Test", database: db)
+    }
     
     override open func setupSiteSources(_ app: Application, sources: LeafSources) throws {
         let path = Bundle.module.url(forResource: "Views", withExtension: nil)!.path

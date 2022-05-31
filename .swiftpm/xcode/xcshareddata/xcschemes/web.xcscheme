@@ -82,9 +82,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "vbt"
-            BuildableName = "vbt"
-            BlueprintName = "vbt"
+            BlueprintIdentifier = "web"
+            BuildableName = "web"
+            BlueprintName = "web"
             ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
