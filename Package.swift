@@ -9,23 +9,32 @@ import PackageDescription
 
 let package = Package(
     name: "VaporBaseTest",
+    
     platforms: [
-        .macOS(.v12), .iOS(.v15), .tvOS(.v15), .watchOS(.v8)
+        .macOS(.v12)
     ],
+    
     products: [
-        .library(
-            name: "VaporBaseTest",
-            targets: ["VaporBaseTest"]),
+        .executable(
+            name: "vbt",
+            targets: ["VaporBaseTest"]
+        ),
     ],
+    
     dependencies: [
+        .package(url: "https://github.com/elegantchaos/VaporBase.git", from: "1.0.0"),
         .package(url: "https://github.com/elegantchaos/XCTestExtensions.git", from: "1.4.2")
     ],
+    
     targets: [
-        .target(
+        .executableTarget(
             name: "VaporBaseTest",
-            dependencies: []),
-        .testTarget(
-            name: "VaporBaseTestTests",
-            dependencies: ["VaporBaseTest", "XCTestExtensions"]),
+            dependencies: [
+                .product(name: "VaporBase", package: "VaporBase")
+            ],
+            resources: [
+                .copy("Resources/Views")
+            ]
+        ),
     ]
 )
