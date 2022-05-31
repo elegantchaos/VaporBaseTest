@@ -22,7 +22,7 @@ let package = Package(
     ],
     
     dependencies: [
-        .package(url: "https://github.com/elegantchaos/VaporBase.git", from: "1.0.0"),
+        .package(url: "https://github.com/elegantchaos/VaporBase.git", from: "1.1.0"),
         .package(url: "https://github.com/elegantchaos/XCTestExtensions.git", from: "1.4.2")
     ],
     
