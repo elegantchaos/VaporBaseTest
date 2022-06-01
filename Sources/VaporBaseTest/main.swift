@@ -11,7 +11,7 @@ import VaporBase
 class TestSite: VaporBaseSite {
     init() {
         let db = Database(name: "vaporbasetest")
-        super.init(name: "Test", database: db)
+        super.init(name: "VaporBase Test", email: "support@vbtest.com", database: db)
     }
     
     override open func setupSiteSources(_ app: Application, sources: LeafSources) throws {
